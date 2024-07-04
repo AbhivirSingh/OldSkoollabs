@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics
+    </title>
+    <style>
+        /* header */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            animation: myGradient 20s infinite;
+            border-radius: 0px;
+            height: 93px;
+            background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
+        }
+
+
+        .Logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .Logo img {
+            width: 6rem;
+            height: 5rem;
+            margin-right: 10px;
+            margin-left: 1rem;
+        }
+
+        .Logo span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-bar {
+            margin-left: 563px;
+
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-right: 159px;
+            font-family: emoji;
+            font-size: 23px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 49px;
+            font-style: bold;
+        }
+
+        nav ul li:hover {
+            text-decoration: underline overline;
+        }
+
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        @keyframes myGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: inherit;
+        }
+
+        /* Style for CONTACT button */
+        .contact-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: -145px;
+            transition: opacity 0.3s ease;
+            margin-right: 168px;
+        }
+
+        .contact-button:hover {
+            opacity: 0.5;
+        }
+
+        .contact-button a {
+            text-decoration: none;
+            /* Removes underline */
+            color: inherit;
+            /* Inherits the color from the parent element */
+        }
+
+        /*box1*/
+        .box1 {
+            background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
+            display: inline-flex;
+            padding-top: 4rem;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .box1 img {
+            margin-right: 3rem;
+            margin-bottom: 3rem;
+            border-radius: 4rem;
+        }
+
+        /* text1 */
+        .text1 {
+            font-family: sans-serif;
+        }
+
+        .text1 h2 {
+            font-size: 3rem;
+            color: white;
+            margin-left: 8rem;
+        }
+
+        .text1 h3 {
+            font-size: 1.5rem;
+            color: black;
+            margin-left: 6rem;
+            margin-right: 3rem;
+        }
+
+        /* box2  */
+        .box2 {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .box2 h1 {
+            margin-bottom: 71px;
+            color: #333;
+            font-size: 3rem;
+            margin-left: 3rem;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            cursor: pointer;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 3rem;
+            margin-left: 4rem;
+            margin-right: 1rem;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-item h2 {
+            margin: 0;
+            font-size: 1.5em;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .service-item h2::after {
+            content: '\25BC';
+            /* Unicode for downward arrow */
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+
+        .service-item.active h2::after {
+            transform: translateY(-50%) rotate(180deg);
+            /* Rotate arrow when active */
+        }
+
+        .service-description {
+            display: none;
+            margin-top: 10px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .service-item.active .service-description {
+            display: block;
+        }
+
+        /* box3 */
+        .box3 {
+            background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
+            font-family: sans-serif;
+            margin-top: -2rem;
+        }
+
+        .box3 h1 {
+            text-align: center;
+            padding-top: 3rem;
+            color: floralwhite;
+            font-size: 2.8rem;
+        }
+
+        .all1{
+            display: inline-flex;
+            justify-content: space-between;
+            gap: 35rem;
+            margin-bottom: 4rem;
+            margin-top: 3rem;
+        }
+
+        .one {
+            display: inline-flex;
+            justify-content: space-between;
+            gap: 2rem;
+            width: 11rem;
+            height: 9rem;
+            margin-left: 2rem;
+        }
+        
+        .one h2{
+            margin-left: 9rem;
+        }
+        .one img{
+            margin-left: 6rem;
+            border-radius: 2rem;
+        }
+
+        .two{
+            display: inline-flex;
+            justify-content: space-between;
+            gap: 2rem;
+            
+        }
+        
+        .two h2{
+            margin-left: 2rem;
+        }
+        .two img{
+            margin-left: 2rem;
+            width: 13rem;
+            height: 9rem;
+            border-radius: 2rem;
+            margin-right: 6rem;
+        }
+
+        .all2{
+            display: inline-flex;
+            justify-content: space-between;
+            gap: 35rem;
+            margin-bottom: 4rem;
+            margin-top: 3rem;
+        }
+
+        .three {
+            display: inline-flex;
+            justify-content: space-between;
+            gap: 2rem;
+            width: 11rem;
+            height: 9rem;
+            margin-left: 2rem;
+        }
+        
+        .three h2{
+            margin-left: 9rem;
+        }
+        .three img{
+            margin-left: 4rem;
+            border-radius: 2rem;
+        }
+
+        .four{
+            display: inline-flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        
+        .four h2{
+            margin-left: 2rem;
+        }
+        .four img{
+            margin-left: 5rem;
+            width: 13rem;
+            height: 9rem;
+            border-radius: 2rem;
+            margin-right: 6rem;
+        }
+
+        /* box 6 */
+
+.box6 {
+  /* background-color: #92C7CF; */
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    margin-bottom: 35px;
+    color: black;
+    padding-top: 54px;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-left: 135px;
+    margin-right: 143px;
+  }
+}
+
+#call {
+  color: orangered;
+  font-size: 37px;
+  font-family: sans-serif;
+}
+
+.button1 button {
+  margin-left: 346px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid orangered;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button1 {
+  padding-top: 22px;
+  padding-bottom: 48px;
+  height: 40px;
+}
+
+.button1 button:hover {
+  transform: scale(1.1);
+  /* Increases size by 10% */
+  padding: 12px 22px;
+  /* Increases padding */
+}
+
+.button1 a {
+  text-decoration: none;
+  /* Removes underline */
+  color: inherit;
+  /* Inherits the color from the parent element */
+}
+
+/*box 7 */
+
+/* Box styling */
+.box7 {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+/* Remove bullet points for all ul elements within .box7 */
+.box7 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Styling for ul and li elements within .one */
+.one ul li {
+  margin: 5px;
+}
+
+/* Styling for ul and li elements within .two */
+.two ul li {
+  margin: 5px;
+}
+
+/* Styling for ul and li elements within .three */
+.three ul li {
+  margin: 5px;
+}
+
+/* Remove underline from links and inherit color */
+.box7 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Optional: Add underline on hover if needed */
+.box7 a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure the li elements inside a tags behave like links */
+.box7 a li {
+  cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="container">
+        <div class="Logo">
+            <img src="./assets/logo osl.jpg">
+        </div>
+        <div class="nav-bar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">ABOUT</a></li>
+                    <li><a href="index.html">SERVICES</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="contact-button"><a href="contact.html">CONTACT</a></button>
+
+    </div>
+
+    <!-- box1 -->
+    <div class="box1">
+        <div class="text1">
+            <h2>Data Analytics
+            </h2>
+            <h3>Unlock the full potential of your data with our advanced analytics solutions.<br> Our team utilizes cutting-edge techniques to analyze and interpret data,<br> providing actionable insights that drive informed decision-making <br>and fuel business growth.</h3>
+        </div>
+        <img src="https://media.gettyimages.com/id/1317587887/photo/trading-charts-on-a-display.jpg?s=612x612&w=0&k=20&c=Yy2ULUp7jRXFRaOeClA45OUQr5Juv34cf7GCTRhLKO4=">
+    </div>
+
+    <!-- box2 -->
+    <div class="box2">
+        <h1>Services</h1>
+
+        <div class="services-container">
+            <div class="service-item" onclick="toggleDescription(this)">
+                <h2>Data Warehousing</h2>
+                <div class="service-description">
+                    Centralize your data storage for efficient access and analysis
+                </div>
+            </div>
+            <div class="service-item" onclick="toggleDescription(this)">
+                <h2>Business Intelligence (BI)</h2>
+                <div class="service-description">
+                    Visualize and interpret data to support decision-making
+
+                </div>
+            </div>
+            <div class="service-item" onclick="toggleDescription(this)">
+                <h2>Big Data Analytics</h2>
+                <div class="service-description">
+                    Handle and analyze large volumes of data for comprehensive insights
+                </div>
+            </div>
+            <div class="service-item" onclick="toggleDescription(this)">
+                <h2>Predictive Analytics</h2>
+                <div class="service-description">
+                    Anticipate future trends and behaviors to stay ahead of the curve
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function toggleDescription(element) {
+                element.classList.toggle('active');
+            }
+        </script>
+    </div>
+
+    <!-- box3 -->
+    <div class="box3">
+        <h1>HOW WILL THIS HELP YOU?</h1>
+        <div class="all1">
+        <div class="one">
+            <h2>Improved decision-making</h2>
+            <img
+                src="https://media.gettyimages.com/id/872019580/photo/men-viewing-a-large-screen-of-information.jpg?s=612x612&w=0&k=20&c=wXFeSlE-w_fBkMxUFxODMAWIANBoC498QZIRhl8ajLY=">
+        </div>
+        <div class="two">
+            <h2>Enhanced business performance</h2>
+            <img src="https://media.gettyimages.com/id/1406007730/photo/finance-dashboard-with-financial-charts-and-data-graphs.jpg?s=612x612&w=0&k=20&c=jrHdHJ_zQe_XniM06t7b4RCpEh04Sl_gufqVbdDgbeo=">
+        </div>
+    </div>
+
+    <div class="all2">
+        <div class="three">
+            <h2>Identification of new opportunities</h2>
+            <img
+                src="https://media.gettyimages.com/id/1367899893/photo/multi-racial-diverse-group-of-people-working-with-paperwork-on-a-board-room-table-at-a.jpg?s=612x612&w=0&k=20&c=2t0t2NfFIpuggzGw54kqtYanxj3f7if1CVjnPh5YRCc=">
+        </div>
+        <div class="four">
+            <h2>Better customer understanding</h2>
+            <img src="https://media.gettyimages.com/id/1291173179/photo/business-report-on-digital-tablet.jpg?s=612x612&w=0&k=20&c=u97PiC9DBTy-PWDWv7jpkrtreRPw_Am9GUIIW13hitU=">
+        </div>
+    </div>
+    </div>
+
+    <div class="box6">
+        <div class="text6">
+        <h1>Ready to take your business to the next level? <br><br><span id="call"> Contact Us </span>today to learn more about our services and
+            how we
+            can help you achieve your goals. We look forward to hearing from you!</h1>
+        <div class="button1">
+            <button><a href="contact.html">Get in Touch</a></button>
+        </div>
+    </div>
+        <div class="image5">
+            <img id="img5" src="./assets/2.png">
+        </div>
+    </div>
+
+    <div class="box7">
+        <div class="one">
+            <ul>
+                <li>Company's Name</li>
+                <li>Address Line 1</li>
+                <li>Address Line 2</li>
+                <li>City, State, Zip Code</li>
+            </ul>
+        </div>
+        <div class="two">
+            <ul>
+                <a href="AI.html"><li>AI</li></a>
+                <a href="IOT.html"><li>IOT</li></a>
+                <a href="TestingSolutions.html"><li>Testing Solutions</li></a>
+                <a href="SoftwareDevelopment.html"><li>Software Development</li></a>
+                <a href="DataAnalytics.html"><li>Data Analytics</li></a>
+                <a href="DigitalMarketing.html"><li>Digital Marketing</li></a>
+            </ul>
+        </div>
+        <div class="three">
+            <ul>
+                <li>Email</li>
+                <li>Instagram</li>
+                <li>Linkedin</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

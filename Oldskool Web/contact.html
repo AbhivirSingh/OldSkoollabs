@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        /* header */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            animation: myGradient 20s infinite;
+            border-radius: 0px;
+            height: 93px;
+            background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
+        }
+
+
+        .Logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .Logo img {
+  width: 6rem;
+  height: 5rem;
+  margin-right: 10px;
+  margin-left: 1rem;
+}
+
+        .Logo span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-bar {
+            margin-left: 563px;
+
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-right: 159px;
+            font-family: emoji;
+            font-size: 23px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 49px;
+            font-style: bold;
+        }
+
+        nav ul li:hover {
+            text-decoration: underline overline;
+        }
+
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        @keyframes myGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: inherit;
+        }
+
+        /* Style for CONTACT button */
+        .contact-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: -237px;
+            transition: opacity 0.3s ease;
+            margin-right: 168px;
+        }
+
+        .contact-button:hover {
+            opacity: 0.5;
+        }
+
+        .contact-button a {
+            text-decoration: none;
+            /* Removes underline */
+            color: inherit;
+            /* Inherits the color from the parent element */
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-1 {
+            max-width: 800px;
+            margin: 101px auto;
+            padding: 74px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .container-1 h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 16%;
+            padding: 10px;
+            background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 43%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: grey;
+        }
+
+
+        /*box 7 */
+
+        .box7 ul {
+            list-style-type: none;
+        }
+
+        .box7 {
+            display: inline-flex;
+            justify-content: space-between;
+            gap: 20px;
+            background-color: black;
+            color: white;
+            width: 100%;
+        }
+
+        .one {
+            margin-left: 112px;
+            margin-top: 43px;
+        }
+
+        .two {
+            margin-left: 74px;
+            margin-top: 35px;
+        }
+
+        .three {
+            margin-right: 272px;
+            margin-top: 47px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div class="container">
+        <div class="Logo">
+            <img src="./assets/logo osl.jpg">
+        </div>
+        <div class="nav-bar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">ABOUT</a></li>
+                    <li><a href="index.html">SERVICES</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="contact-button"><a href="contact.html">CONTACT</a></button>
+
+    </div>
+
+
+    <div class="container-1">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <div class="box7">
+        <div class="one">
+            <ul>
+                <li>Company's Name</li>
+                <li>Address Line 1</li>
+                <li>Address Line 2</li>
+                <li>City, State, Zip Code</li>
+            </ul>
+        </div>
+        <div class="two">
+            <ul>
+                <li>AI</li>
+                <li>IOT</li>
+                <li>Testing Solutions</li>
+                <li>Software Development</li>
+                <li>Data Analytics</li>
+                <li>Digital Marketing</li>
+            </ul>
+        </div>
+        <div class="three">
+            <ul>
+                <li>Email</li>
+                <li>Instagram</li>
+                <li>Linkedin</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
