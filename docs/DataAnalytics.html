@@ -7,6 +7,19 @@
     <title>Data Analytics
     </title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         /* header */
         .container {
             display: flex;
@@ -14,8 +27,8 @@
             align-items: center;
             padding: 10px;
             animation: myGradient 20s infinite;
-            border-radius: 0px;
-            height: 93px;
+            /* border-radius: 0px; */
+            /* height: 93px; */
             background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
         }
 
@@ -37,17 +50,11 @@
             font-weight: bold;
         }
 
-        .nav-bar {
-            margin-left: 563px;
-
-        }
-
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
             margin-right: 159px;
-            font-family: emoji;
             font-size: 23px;
         }
 
@@ -58,12 +65,16 @@
         }
 
         nav ul li:hover {
-            text-decoration: underline overline;
+            border-bottom: 2px solid black;
+        }
+
+        nav ul li:last-child:hover {
+            border-bottom: 0px;
         }
 
 
         nav ul li:last-child {
-            margin-right: 0;
+            margin-right: 40;
         }
 
         nav ul li a {
@@ -89,7 +100,7 @@
 
         .nav-bar ul li a {
             text-decoration: none;
-            color: inherit;
+            /* color: inherit; */
             font-weight: inherit;
         }
 
@@ -102,13 +113,14 @@
             color: white;
             border: none;
             cursor: pointer;
-            margin-left: -145px;
+            /* margin-left: -237px; */
             transition: opacity 0.3s ease;
-            margin-right: 168px;
+            /* margin-right: 168px; */
         }
 
         .contact-button:hover {
-            opacity: 0.5;
+
+            opacity: 0.9;
         }
 
         .contact-button a {
@@ -121,34 +133,37 @@
         /*box1*/
         .box1 {
             background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
-            display: inline-flex;
-            padding-top: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 0;
             width: 100%;
-            justify-content: space-between;
+            gap: 40px;
         }
 
-        .box1 img {
-            margin-right: 3rem;
-            margin-bottom: 3rem;
-            border-radius: 4rem;
+        .box1>img {
+            border-radius: 1.5rem;
+            width: 612px;
         }
 
         /* text1 */
         .text1 {
             font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            max-width: 32.3vw;
         }
 
         .text1 h2 {
             font-size: 3rem;
             color: white;
-            margin-left: 8rem;
         }
 
         .text1 h3 {
+            margin: 0;
             font-size: 1.5rem;
             color: black;
-            margin-left: 6rem;
-            margin-right: 3rem;
         }
 
         /* box2  */
@@ -170,7 +185,7 @@
         .services-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 2rem 4rem;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -182,9 +197,6 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            margin-bottom: 3rem;
-            margin-left: 4rem;
-            margin-right: 1rem;
         }
 
         .service-item:hover {
@@ -239,12 +251,31 @@
             font-size: 2.8rem;
         }
 
-        .all1{
-            display: inline-flex;
-            justify-content: space-between;
-            gap: 35rem;
-            margin-bottom: 4rem;
-            margin-top: 3rem;
+        .all {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 50px;
+        }
+
+        .all>div {
+            display: flex ! important;
+            flex-direction: column-reverse;
+            margin: 0;
+            width: auto;
+            height: auto;
+            text-align: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .all>div img {
+            margin: 0;
+            width: 300px;
+            height: 180px;
+        }
+
+        .all>div h2 {
+            margin-left: 0;
         }
 
         .one {
@@ -255,34 +286,35 @@
             height: 9rem;
             margin-left: 2rem;
         }
-        
-        .one h2{
+
+        .one h2 {
             margin-left: 9rem;
         }
-        .one img{
-            margin-left: 6rem;
+
+        .one img {
+            margin-left: 4rem;
             border-radius: 2rem;
         }
 
-        .two{
+        .two {
             display: inline-flex;
             justify-content: space-between;
             gap: 2rem;
-            
+
         }
-        
-        .two h2{
+
+        .two h2 {
             margin-left: 2rem;
         }
-        .two img{
+
+        .two img {
             margin-left: 2rem;
             width: 13rem;
             height: 9rem;
             border-radius: 2rem;
-            margin-right: 6rem;
         }
 
-        .all2{
+        .all2 {
             display: inline-flex;
             justify-content: space-between;
             gap: 35rem;
@@ -298,164 +330,366 @@
             height: 9rem;
             margin-left: 2rem;
         }
-        
-        .three h2{
+
+        .three h2 {
             margin-left: 9rem;
         }
-        .three img{
+
+        .three img {
             margin-left: 4rem;
             border-radius: 2rem;
         }
 
-        .four{
+        .four {
             display: inline-flex;
             justify-content: space-between;
             gap: 2rem;
         }
-        
-        .four h2{
+
+        .four h2 {
             margin-left: 2rem;
         }
-        .four img{
+
+        .four img {
             margin-left: 5rem;
             width: 13rem;
             height: 9rem;
             border-radius: 2rem;
-            margin-right: 6rem;
         }
 
         /* box 6 */
 
-.box6 {
-  /* background-color: #92C7CF; */
-  display: flex;
-  justify-content: space-between;
 
-  h1 {
-    margin-bottom: 35px;
-    color: black;
-    padding-top: 54px;
-    font-size: 30px;
-    font-family: sans-serif;
-    margin-left: 135px;
-    margin-right: 143px;
-  }
-}
+        .box6 {
+            background-color: #e9fcff;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 4rem;
+            gap: 40px;
 
-#call {
-  color: orangered;
-  font-size: 37px;
-  font-family: sans-serif;
-}
+            h1 {
+                font-family: sans-serif;
+            }
+        }
 
-.button1 button {
-  margin-left: 346px;
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  border: 2px solid orangered;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
+        .text6 {
+            max-width: 50rem;
+        }
 
-.button1 {
-  padding-top: 22px;
-  padding-bottom: 48px;
-  height: 40px;
-}
+        #call {
+            color: orangered;
+            font-size: 37px;
+            font-family: sans-serif;
+        }
 
-.button1 button:hover {
-  transform: scale(1.1);
-  /* Increases size by 10% */
-  padding: 12px 22px;
-  /* Increases padding */
-}
+        .button1 button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid orangered;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s all ease-out;
+        }
 
-.button1 a {
-  text-decoration: none;
-  /* Removes underline */
-  color: inherit;
-  /* Inherits the color from the parent element */
-}
+        .button1 {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
 
-/*box 7 */
+        .button1 button:hover {
+            transform: scale(1.1);
+            /* Increases size by 10% */
+            padding: 12px 22px;
+            /* Increases padding */
+        }
 
-/* Box styling */
-.box7 {
-  display: flex;
-  justify-content: space-between;
-  background-color: black;
-  color: white;
-  padding: 20px;
-}
+        .button1 a {
+            text-decoration: none;
+            /* Removes underline */
+            color: inherit;
+            /* Inherits the color from the parent element */
+        }
 
-/* Remove bullet points for all ul elements within .box7 */
-.box7 ul {
-  list-style-type: none;
-  padding: 0;
-}
+        /*box 7 */
 
-/* Styling for ul and li elements within .one */
-.one ul li {
-  margin: 5px;
-}
+        /* Box styling */
+        .box7 {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            font-size: 14px;
+            padding: 4rem 0;
+        }
 
-/* Styling for ul and li elements within .two */
-.two ul li {
-  margin: 5px;
-}
+        .box7 .two,
+        .box7 .three {
+            display: block;
+            width: auto;
+            height: auto;
+            margin: 0;
+        }
 
-/* Styling for ul and li elements within .three */
-.three ul li {
-  margin: 5px;
-}
+        .box7 div>div:first-child {
+            font-size: 1rem;
+            color: #dddddd;
+            margin-bottom: 4px;
+        }
 
-/* Remove underline from links and inherit color */
-.box7 a {
-  text-decoration: none;
-  color: inherit;
-}
+        .box7 ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
-/* Optional: Add underline on hover if needed */
-.box7 a:hover {
-  text-decoration: underline;
-}
+        .box7 .three ul {
+            display: flex;
+            margin-top: 1rem;
+            gap: 20px;
+        }
 
-/* Ensure the li elements inside a tags behave like links */
-.box7 a li {
-  cursor: pointer;
-}
+        .box7 .three ul li {
+            border-radius: 25%;
+            background-color: #3f3f3f;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .box7 ul li a {
+            color: #999999;
+            text-decoration: none;
+        }
+
+        .box7 .three ul li a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .box7 .three ul li:nth-child(3):hover a svg path {
+            fill: #0A66C2;
+        }
+
+        .box7 .three ul li:nth-child(4):hover a svg path {
+            fill: #55acee;
+        }
+
+        .box7 .three ul li:last-child:hover a svg path {
+            fill: #1e77f0;
+        }
+
+        @media (max-width:1300px) {
+            .box1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box1 img {
+                width: 400px;
+                margin: 0;
+            }
+
+            .text1 {
+                text-align: center;
+                max-width: 70vw;
+            }
+        }
+
+        @media (max-width:990px) {
+            .nav-bar {
+                position: absolute;
+                right: 2px
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                left: -200px;
+                /* Off the screen initially */
+                width: 250px;
+                /* Width of the navigation bar */
+                background-color: rgb(37, 37, 37);
+                top: -20px;
+                padding: 20px;
+                height: 640px;
+
+            }
+
+            .nav-links li {
+                display: block;
+                margin: 20px;
+
+
+            }
+
+            .nav-links li a {
+                color: white;
+
+            }
+
+            .burger-menu {
+                display: block;
+                cursor: pointer;
+                position: absolute;
+                right: 5px;
+                z-index: 1000;
+            }
+
+            .line {
+                width: 25px;
+                height: 3px;
+                background-color: #000;
+                margin: 5px 0;
+                transition: transform 0.3s, opacity 0.3s;
+            }
+
+            .line:first-child {
+                transform-origin: top left;
+            }
+
+            .line:last-child {
+                transform-origin: bottom left;
+            }
+
+            .nav-open .line:nth-child(1) {
+                transform: rotate(45deg);
+            }
+
+            .nav-open .line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .nav-open .line:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+
+            .nav-open .nav-links {
+                display: block;
+                right: 0;
+                /* Move to the right to reveal */
+            }
+
+            .all {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .box6 {
+                flex-direction: column;
+
+                h1 {
+                    margin-bottom: 35px;
+                    color: black;
+                    padding-top: 54px;
+                    font-size: 20px;
+                    font-family: sans-serif;
+                    margin: 10px;
+                }
+            }
+
+            #call {
+                font-size: 18px;
+            }
+
+            .button1 button {
+                margin-left: 146px;
+                background-color: black;
+                color: white;
+                padding: 10px 20px;
+                border: 2px solid orangered;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            #img5 {
+                height: 300px;
+                margin-left: 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .services-container {
+                /* grid-template-columns: repeat(1, 1fr); */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box7 {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width:430px) {
+            .box7 .three ul {
+                transform: scale(0.8);
+            }
+
+            .box1 img {
+                width: 200px;
+                border-radius: 2rem;
+            }
+
+            .box1 .text1 h2 {
+                font-size: xx-large;
+            }
+
+            .box3>* {
+                transform: scale(0.8);
+            }
+        }
     </style>
 </head>
 
 <body>
     <!-- header -->
-    <div class="container">
+    <header class="container">
         <div class="Logo">
-            <img src="./assets/logo osl.jpg">
+            <img src="./assets/logo osl.jpg" alt="logo">
         </div>
-        <div class="nav-bar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="index.html">ABOUT</a></li>
-                    <li><a href="index.html">SERVICES</a></li>
-                </ul>
-            </nav>
-        </div>
-        <button class="contact-button"><a href="contact.html">CONTACT</a></button>
-
-    </div>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="contact.html" class="contact-button">Contact</a></li>
+            </ul>
+            <div class="burger-menu" onclick="toggleNav()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
 
     <!-- box1 -->
     <div class="box1">
         <div class="text1">
             <h2>Data Analytics
             </h2>
-            <h3>Unlock the full potential of your data with our advanced analytics solutions.<br> Our team utilizes cutting-edge techniques to analyze and interpret data,<br> providing actionable insights that drive informed decision-making <br>and fuel business growth.</h3>
+            <h3>Unlock the full potential of your data with our advanced analytics solutions.<br> Our team utilizes
+                cutting-edge techniques to analyze and interpret data,<br> providing actionable insights that drive
+                informed decision-making <br>and fuel business growth.</h3>
         </div>
-        <img src="https://media.gettyimages.com/id/1317587887/photo/trading-charts-on-a-display.jpg?s=612x612&w=0&k=20&c=Yy2ULUp7jRXFRaOeClA45OUQr5Juv34cf7GCTRhLKO4=">
+        <img
+            src="https://media.gettyimages.com/id/1317587887/photo/trading-charts-on-a-display.jpg?s=612x612&w=0&k=20&c=Yy2ULUp7jRXFRaOeClA45OUQr5Juv34cf7GCTRhLKO4=">
     </div>
 
     <!-- box2 -->
@@ -500,72 +734,134 @@
     <!-- box3 -->
     <div class="box3">
         <h1>HOW WILL THIS HELP YOU?</h1>
-        <div class="all1">
-        <div class="one">
-            <h2>Improved decision-making</h2>
-            <img
-                src="https://media.gettyimages.com/id/872019580/photo/men-viewing-a-large-screen-of-information.jpg?s=612x612&w=0&k=20&c=wXFeSlE-w_fBkMxUFxODMAWIANBoC498QZIRhl8ajLY=">
+        <div class="all">
+            <div class="one">
+                <h2>Improved decision-making</h2>
+                <img
+                    src="https://media.gettyimages.com/id/872019580/photo/men-viewing-a-large-screen-of-information.jpg?s=612x612&w=0&k=20&c=wXFeSlE-w_fBkMxUFxODMAWIANBoC498QZIRhl8ajLY=">
+            </div>
+            <div class="two">
+                <h2>Enhanced business performance</h2>
+                <img
+                    src="https://media.gettyimages.com/id/1406007730/photo/finance-dashboard-with-financial-charts-and-data-graphs.jpg?s=612x612&w=0&k=20&c=jrHdHJ_zQe_XniM06t7b4RCpEh04Sl_gufqVbdDgbeo=">
+            </div>
+            <div class="three">
+                <h2>Identification of new opportunities</h2>
+                <img
+                    src="https://media.gettyimages.com/id/1367899893/photo/multi-racial-diverse-group-of-people-working-with-paperwork-on-a-board-room-table-at-a.jpg?s=612x612&w=0&k=20&c=2t0t2NfFIpuggzGw54kqtYanxj3f7if1CVjnPh5YRCc=">
+            </div>
+            <div class="four">
+                <h2>Better customer understanding</h2>
+                <img
+                    src="https://media.gettyimages.com/id/1291173179/photo/business-report-on-digital-tablet.jpg?s=612x612&w=0&k=20&c=u97PiC9DBTy-PWDWv7jpkrtreRPw_Am9GUIIW13hitU=">
+            </div>
         </div>
-        <div class="two">
-            <h2>Enhanced business performance</h2>
-            <img src="https://media.gettyimages.com/id/1406007730/photo/finance-dashboard-with-financial-charts-and-data-graphs.jpg?s=612x612&w=0&k=20&c=jrHdHJ_zQe_XniM06t7b4RCpEh04Sl_gufqVbdDgbeo=">
-        </div>
-    </div>
-
-    <div class="all2">
-        <div class="three">
-            <h2>Identification of new opportunities</h2>
-            <img
-                src="https://media.gettyimages.com/id/1367899893/photo/multi-racial-diverse-group-of-people-working-with-paperwork-on-a-board-room-table-at-a.jpg?s=612x612&w=0&k=20&c=2t0t2NfFIpuggzGw54kqtYanxj3f7if1CVjnPh5YRCc=">
-        </div>
-        <div class="four">
-            <h2>Better customer understanding</h2>
-            <img src="https://media.gettyimages.com/id/1291173179/photo/business-report-on-digital-tablet.jpg?s=612x612&w=0&k=20&c=u97PiC9DBTy-PWDWv7jpkrtreRPw_Am9GUIIW13hitU=">
-        </div>
-    </div>
     </div>
 
     <div class="box6">
         <div class="text6">
-        <h1>Ready to take your business to the next level? <br><br><span id="call"> Contact Us </span>today to learn more about our services and
-            how we
-            can help you achieve your goals. We look forward to hearing from you!</h1>
-        <div class="button1">
-            <button><a href="contact.html">Get in Touch</a></button>
+            <h1>Ready to take your business to the next level? <br><br><span id="call"> Contact Us </span>today to learn
+                more about our services and
+                how we
+                can help you achieve your goals. We look forward to hearing from you!</h1>
+            <div class="button1">
+                <button><a href="contact.html">Get in Touch</a></button>
+            </div>
         </div>
-    </div>
         <div class="image5">
             <img id="img5" src="./assets/2.png">
         </div>
     </div>
 
     <div class="box7">
-        <div class="one">
-            <ul>
-                <li>Company's Name</li>
-                <li>Address Line 1</li>
-                <li>Address Line 2</li>
-                <li>City, State, Zip Code</li>
-            </ul>
-        </div>
         <div class="two">
+            <div>Hyperlinks</div>
             <ul>
-                <a href="AI.html"><li>AI</li></a>
-                <a href="IOT.html"><li>IOT</li></a>
-                <a href="TestingSolutions.html"><li>Testing Solutions</li></a>
-                <a href="SoftwareDevelopment.html"><li>Software Development</li></a>
-                <a href="DataAnalytics.html"><li>Data Analytics</li></a>
-                <a href="DigitalMarketing.html"><li>Digital Marketing</li></a>
+                <li>
+                    <a href="AI.html">AI</a>
+                </li>
+                <li>
+                    <a href="IOT.html">IOT</a>
+                </li>
+                <li> <a href="TestingSolutions.html">
+                        Testing Solutions
+                    </a>
+                </li>
+                <li>
+                    <a href="SoftwareDevelopment.html">
+                        Software Development
+                    </a>
+                </li>
+                <li>
+                    <a href="DataAnalytics.html">
+                        Data Analytics
+                    </a>
+                </li>
+                <li>
+                    <a href="DigitalMarketing.html">
+                        Digital Marketing
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="three">
+            <div>Contact Us</div>
             <ul>
-                <li>Email</li>
-                <li>Instagram</li>
-                <li>Linkedin</li>
+                <li>
+                    <a href="mailto:info@example.com" aria-label="ashoksahu_06@yahoo.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 0 24 24">
+                            <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/ashoksahu_06/?hl=en" title="Instagram" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24">
+                            <path fill="white"
+                                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://navrasagroups.com/index.html#" title="LinkedIn" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+                            <g fill="#bbbbbb">
+                                <path fill-rule="evenodd"
+                                    d="M12.51 8.796v1.697a3.74 3.74 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766c-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483a1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.6 1.6 0 0 1 1.6 1.606"
+                                    clip-rule="evenodd" />
+                                <path d="M7.2 8.809H4V19.5h3.2z" />
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/AshokKu80906039" title="Twitter" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24">
+                            <path fill="white"
+                                d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23" />
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="https://www.facebook.com/Tourist-Guide-in-Varanasi-106546464522001" title="Facebook"
+                        aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24">
+                            <path fill="white"
+                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95" />
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 </body>
-
+<script>
+    function toggleNav() {
+        var navBar = document.querySelector('.nav-bar');
+        navBar.classList.toggle('nav-open');
+    }
+</script>
 </html>

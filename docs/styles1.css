@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
 * {
-  padding: 0px;
-  margin: 0px;
+  box-sizing: border-box;
 }
 
 .poppins-light {
@@ -153,17 +160,18 @@ nav ul li a {
   background-color: black;
   color: white;
   font-size: 15px;
-  border-radius: 20px;
+  border-radius: 1rem;
   padding: 13px 20px;
   margin-bottom: 20px;
   height: 46px;
   border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 
 .hello button:hover {
   transform: scale(1.1);
   /* Increases size by 10% */
-  padding: 12px 22px;
   /* Increases padding */
 }
 
@@ -184,7 +192,7 @@ nav ul li a {
 
 .box1 {
   background-color: white;
-  margin-top: 94px;
+  margin: 130px 0;
 }
 
 #main {
@@ -197,7 +205,10 @@ nav ul li a {
 
 
 .container1 {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-around;
+  gap: 4rem;
+  margin: 0 4rem;
 }
 
 .image1 img {
@@ -211,8 +222,6 @@ nav ul li a {
   font-size: 23px;
   color: black;
   padding-top: 67px;
-  margin-left: 65px;
-  margin-right: 101px;
 }
 
 
@@ -223,8 +232,6 @@ nav ul li a {
   justify-content: space-between;
   background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
   font-family: sans-serif;
-  margin-top: 130px;
-  width: 100%;
   color: white;
   padding: 15px;
 }
@@ -273,16 +280,15 @@ nav ul li a {
 /* Box S */
 
 .boxS {
-  padding-top: 22px;
-  margin-bottom: 100px;
+  margin: 100px 4rem;
 }
 
 .boxS h1 {
+  text-align: center;
   font-family: sans-serif;
   font-size: 35px;
   color: black;
   margin: 20px;
-  margin-left: 13rem;
   margin-bottom: 3rem;
 }
 
@@ -342,9 +348,6 @@ nav ul li a {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card1 a {
-  display: block; /* Make the anchor a block-level element */
-}
 
 .card-link {
   text-decoration: none;
@@ -354,15 +357,20 @@ nav ul li a {
 
 .services-container {
   display: flex;
-  justify-content: space-between;
-  margin-left: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4rem;
 }
 
 .rows {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 30px;
   text-align: center;
+}
+
+.image-container img {
+  border-radius: 1rem;
 }
 
 /*  Box 2 */
@@ -370,25 +378,23 @@ nav ul li a {
 .container2 {
   display: flex;
   background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
+  padding: 3rem 5rem;
+  justify-content: space-evenly;
+  gap: 4rem;
+  align-items: center;
 }
 
 .image2 img {
-  padding-right: 100px;
   height: 424px;
   width: 520px;
-  padding-bottom: 30px;
-  margin-top: 46px;
-  margin-left: 57px;
-  margin-bottom: 24px;
+  border-radius: 1.5rem;
 }
 
 .text2 {
   font-family: sans-serif;
   font-size: 27px;
   color: black;
-  padding-top: 67px;
-  margin-left: 5px;
-  margin-right: 135px;
+  max-width: 40rem;
 }
 
 #mission {
@@ -400,44 +406,41 @@ nav ul li a {
 
 .box3 {
   text-align: center;
+  margin: 4rem;
 
 
   h1 {
     font-size: 34px;
-    margin-top: 35px;
     color: black;
+    margin-bottom: 2.5rem;
   }
 }
 
 .container3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 4rem 8rem;
 }
 
 .V1,
 .V2,
 .V3,
-.V4 {
-  margin-right: 51px;
-  border: 2px solid orangered;
+.V4,
+.V5 {
+  border: 2px solid black;
+  background: hsla(18.29268293, 82%, 60.78431373%, 1);
+  color: #fefefe ! important;
   padding: 10px;
   padding-left: 20px;
-  margin-left: 70px;
-  margin-top: 18px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-}
-
-.V5 {
-  grid-column: 1 / -1;
-  /* Span across all columns */
-  text-align: center;
-  /* Center the content */
-  border: 2px solid orangered;
-  padding: 10px;
-  margin-left: 490px;
-  margin-right: 490px;
-  margin-top: 18px;
+  h3 {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -445,20 +448,22 @@ nav ul li a {
   background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
 
   h1 {
-    margin-left: 715px;
+    text-align: center;
     font-family: sans-serif;
-    font-size: 39px;
     color: white;
-    margin-top: 50px;
+    font-size: 2.5rem;
     padding-top: 43px;
+    margin-bottom: 0;
   }
 }
 
 .container5 {
-  padding: 10px;
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  background-color: hsla(18.29268293, 82%, 60.78431373%, 1);
+  padding: 3rem 5rem;
+  justify-content: space-evenly;
+  gap: 4rem;
+  align-items: center;
 }
 
 .image4 img {
@@ -479,19 +484,20 @@ nav ul li a {
 /* box 6 */
 
 .box6 {
-  /* background-color: #92C7CF; */
+  background-color: #e9fcff;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4rem;
+  gap: 40px;
 
   h1 {
-    margin-bottom: 35px;
-    color: black;
-    padding-top: 54px;
-    font-size: 30px;
     font-family: sans-serif;
-    margin-left: 135px;
-    margin-right: 143px;
   }
+}
+
+.text6 {
+  max-width: 50rem;
 }
 
 #call {
@@ -501,7 +507,6 @@ nav ul li a {
 }
 
 .button1 button {
-  margin-left: 346px;
   background-color: black;
   color: white;
   padding: 10px 20px;
@@ -509,12 +514,13 @@ nav ul li a {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  transition: 0.3s all ease-out;
 }
 
 .button1 {
-  padding-top: 22px;
-  padding-bottom: 48px;
-  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 .button1 button:hover {
@@ -535,55 +541,94 @@ nav ul li a {
 
 /* Box styling */
 .box7 {
+  font-family: 'Arial', sans-serif;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: black;
   color: white;
   padding: 20px;
+  font-size: 14px;
+  padding: 4rem 0;
 }
 
-/* Remove bullet points for all ul elements within .box7 */
+.box7 div>div:first-child {
+  font-size: 1rem;
+  color: #dddddd;
+  margin-bottom: 4px;
+}
+
 .box7 ul {
-  list-style-type: none;
+  margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-/* Styling for ul and li elements within .one */
-.one ul li {
-  margin: 5px;
+.box7 .three ul {
+  display: flex;
+  margin-top: 1rem;
+  gap: 20px;
 }
 
-/* Styling for ul and li elements within .two */
-.two ul li {
-  margin: 5px;
-}
-
-/* Styling for ul and li elements within .three */
-.three ul li {
-  margin: 5px;
-}
-
-/* Remove underline from links and inherit color */
-.box7 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Optional: Add underline on hover if needed */
-.box7 a:hover {
-  text-decoration: underline;
-}
-
-/* Ensure the li elements inside a tags behave like links */
-.box7 a li {
+.box7 .three ul li {
+  border-radius: 25%;
+  background-color: #3f3f3f;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
+.box7 ul li a {
+  color: #999999;
+  text-decoration: none;
+}
+
+.box7 .three ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.box7 .three ul li:nth-child(3):hover a svg path {
+  fill: #0A66C2;
+}
+
+.box7 .three ul li:nth-child(4):hover a svg path {
+  fill: #55acee;
+}
+
+.box7 .three ul li:last-child:hover a svg path {
+  fill: #1e77f0;
+}
 
 
 
 /* Existing styles */
 
+@media (max-width:1450px) {
+  .services-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width:1300px) {
+  .container1 .image1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container1,
+  .container2,
+  .container5 {
+    flex-direction: column;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .nav-bar {
@@ -798,13 +843,18 @@ nav ul li a {
   }
 
   .container3 {
-    margin-left: 20px;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* Set elements to flow in a row */
     gap: 10px;
   }
 
+
   .box3 {
+    margin-left: 0;
+    margin-right: 0;
+
     h1 {
       font-size: 32px;
       margin-bottom: 20px;
@@ -814,22 +864,13 @@ nav ul li a {
   .V1,
   .V2,
   .V3,
-  .V4 {
+  .V4,
+  .V5 {
     margin: 10px;
     width: 250px;
     border: 2px solid orangered;
     padding: 10px;
 
-  }
-
-  .V5 {
-    grid-column: 1 / -1;
-    /* Span across all columns */
-    text-align: center;
-    /* Center the content */
-    border: 2px solid orangered;
-    padding: 10px;
-    margin: 5px;
   }
 
   .container5 {
@@ -894,4 +935,26 @@ nav ul li a {
     margin-left: 20px;
   }
 
+  .box7 {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+@media (max-width:430px) {
+  .box7 .three ul {
+    transform: scale(0.8);
+  }
+
+  .image4 img {
+    transform: scale(0.8);
+  }
+
+  .box3 {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
