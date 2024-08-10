@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 const path = require("path");
 const app = express();
 
-const port = 5000;
+const port = 5050;
 
 let name, email, message;
 app.set("view engine", "ejs");
